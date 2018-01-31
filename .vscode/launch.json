@@ -1,0 +1,57 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        // {
+        //     "name": "chrome:server-start Start browser at port 8080",
+        //     "type": "chrome",
+        //     "request": "launch",
+        //     "url": "http://localhost:8080",
+        //     "sourceMaps": true,
+        //     "webRoot": "${workspaceRoot}",
+        //     "stopOnEntry": false
+        // },
+        // {
+        //     "name": "chrome:attach Attach source with sourcemap.",
+        //     "type": "chrome",
+        //     "request": "attach",
+        //     "port": 9222,
+        //     "sourceMaps": true,
+        //     "webRoot": "${workspaceRoot}",
+        //     "stopOnEntry": false
+        // },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "jest:runSingleTestFile", 
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+            "args": [
+                "${relativeFile}" 
+            ],
+            "protocol": "legacy",
+            "stopOnEntry": false,
+            "preLaunchTask": "Build install modules"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "jest:full and watching all",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+            "args": [
+                 "--watchAll"
+            ],
+            "protocol": "legacy",
+            "stopOnEntry": false
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "jest:full", 
+           "program": "${workspaceFolder}/node_modules/jest/bin/jest.js", 
+            "protocol": "legacy",
+            "stopOnEntry": false
+        } 
+    ]
+}

@@ -1,0 +1,34 @@
+  
+{
+    "version": "2.0.0",
+    "command": "yarn",
+    "isShellCommand": true,
+    "showOutput": "silent",
+    "tasks": [
+        {
+            "taskName": "Build install modules",
+            "suppressTaskName": true,
+            "args": [
+                "install"
+            ],
+            "isBuildCommand": true,
+            "problemMatcher": [
+                "$gulp-tsc"
+            ]
+        },
+        {
+            "taskName": "Run test shell",
+            "label": "Run tests",
+            "type": "shell",
+            "command": "./scripts/test.sh",
+            "windows": {
+                "command": ".\\scripts\\test.cmd"
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

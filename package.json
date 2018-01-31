@@ -1,0 +1,21 @@
+{
+  "name": "test-yarn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": null,
+  "scripts": {
+    "test": "jest "
+  },
+  "dependencies": {
+    "babel": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-jest": "^22.1.0",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^22.1.4",
+    "jest-runner-eslint": "^0.4.0",
+    "webpack": "^3.10.0"
+  }
+}
